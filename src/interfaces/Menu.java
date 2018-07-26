@@ -14,6 +14,7 @@ public class Menu extends JFrame implements ActionListener{
         Inicio mensajeroInicio = new Inicio();
         nombre = mensajeroInicio.nombre;
         setLayout(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Bienvenido " + nombre);
         this.getContentPane().setBackground(Color.WHITE);
         ////////////////////

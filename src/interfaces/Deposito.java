@@ -16,6 +16,7 @@ public class Deposito extends JFrame implements ActionListener {
         saldo = mensajeroConsulta.getSaldo();
         
         setLayout(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Deposito");
         /////////////////////
         deposito = new JLabel("Deposito");

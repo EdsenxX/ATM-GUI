@@ -12,6 +12,7 @@ public class Inicio extends JFrame implements ActionListener{
             
     public Inicio(){
         setLayout(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Serrano´s ATM");
         this.getContentPane().setBackground(new Color(255,255,255));
         /////////////////

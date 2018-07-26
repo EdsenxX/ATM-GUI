@@ -17,6 +17,7 @@ public class Retiro extends JFrame implements ActionListener {
         saldo = mensajeroConsulta.getSaldo();
 
         setLayout(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Retiro");
         //////////////////////
         retiro = new JLabel("Retiro");
