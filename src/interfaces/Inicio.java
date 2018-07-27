@@ -57,6 +57,9 @@ public class Inicio extends JFrame implements ActionListener{
                 formMenu.setBounds(0,0,350,400);
                 formMenu.setLocationRelativeTo(null);
                 formMenu.setResizable(false);
+                
+                JOptionPane.showMessageDialog(null, "Bienvenido " + nombre);
+                
             }
         }
     }
@@ -67,6 +70,10 @@ public class Inicio extends JFrame implements ActionListener{
         formInicio.setBounds(0,0,350,325);
         formInicio.setLocationRelativeTo(null);
         formInicio.setResizable(false);
+        
+        Consulta mensajeroConsulta = new Consulta();
+        mensajeroConsulta.setSaldo(5000);
+        
     }
     
 }

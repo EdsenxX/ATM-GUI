@@ -13,6 +13,7 @@ public class Menu extends JFrame implements ActionListener{
         
         Inicio mensajeroInicio = new Inicio();
         nombre = mensajeroInicio.nombre;
+        
         setLayout(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Bienvenido " + nombre);
@@ -102,6 +103,7 @@ public class Menu extends JFrame implements ActionListener{
     }
     
     public static void main(String[] args){
+        
         Menu formMenu = new Menu();
         formMenu.setVisible(true);
         formMenu.setBounds(0,0,350,400);

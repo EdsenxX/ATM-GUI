@@ -73,17 +73,25 @@ public class Deposito extends JFrame implements ActionListener {
             formMenu.setResizable(false);
         }
         if (e.getSource() == aceptar) {
+            
             operacion = Integer.parseInt(depositar.getText());
-            Consulta mensajeroConsulta = new Consulta();
-            mensajeroConsulta.setSaldo(saldo + operacion);
-            this.setVisible(false);
-            Menu formMenu = new Menu();
-            formMenu.setVisible(true);
-            formMenu.setBounds(0,0,350,400);
-            formMenu.setLocationRelativeTo(null);
-            formMenu.setResizable(false);
-            JOptionPane.showMessageDialog(null, "Deposito de $" + operacion + ", Fue Completada Con Exito "
-                    + "\nTu Saldo Actual Es De: $" + (saldo + operacion));
+            
+            if (operacion >0 && operacion <= 999999999) {
+                Consulta mensajeroConsulta = new Consulta();
+                mensajeroConsulta.setSaldo(saldo + operacion);
+                this.setVisible(false);
+                Menu formMenu = new Menu();
+                formMenu.setVisible(true);
+                formMenu.setBounds(0,0,350,400);
+                formMenu.setLocationRelativeTo(null);
+                formMenu.setResizable(false);
+                JOptionPane.showMessageDialog(null, "Deposito de $" + operacion + ", Fue Completada Con Exito "
+                + "\nTu Saldo Actual Es De: $" + (saldo + operacion));
+            }else if(operacion <= 0){
+                JOptionPane.showMessageDialog(null, "Cantidad no Valida");
+            }else if(operacion > 999999999){
+                JOptionPane.showMessageDialog(null, "La Cantidad Maxina Que Puede Depositar es $999999999");
+            }
             
         }
     }
